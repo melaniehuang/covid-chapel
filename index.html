@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="p5.js"></script>
+    <!-- include the jQuery and jQuery UI scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+                    
+    <!-- plus a jQuery UI theme, here I use "flick" -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <script src="jquery-ui-slider-pips.js"></script>
+    <link rel="stylesheet" href="jquery-ui-slider-pips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="sketch.js"></script>
+  </head>
+
+  <body>
+    <div id="sketch-holder">
+    </div>
+    
+    <button id="button-play" onclick="playTimeline()">
+        <i id="p-button-on" class="zmdi zmdi-pause"></i>
+        <i id="p-button-off" class="zmdi zmdi-play"></i>
+        <span id="timeline-title">Pause</span>
+    </button>
+
+    <div id="title">
+        <h1 id="daysElapsedTitle">The days of COVID-19</h1>
+
+        <div id="info">
+            <button id="button-info" onclick="toggleInfo()">
+              Information
+              <i id="info-chev-down" class="zmdi zmdi-chevron-down"></i>
+              <i id="info-chev-up" class="zmdi zmdi-chevron-up"></i>
+            </button>
+            <div id="info-paragraph">
+                <p>A visualisation representing all cumulative cases of COVID-19 globally since 22 Jan 2020.</p> 
+                <p><em>It’s a place to remember you’re human in the midst of all the chaos.</em></br>– Christopher Rothko</p> 
+                <p>Inspired by the paintings that hang in the Rothko Chapel. A spiritual space for solitude and gathering. It’s one of the places I hope to visit on the other side.</p> 
+
+                <p>Thank you to the data collated by <a href="https://github.com/pomber/covid19" target="_blank">Pomber </a> and the original source of the data from <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">Johns Hopkins CSSE</a></p>
+                
+                <p>Visualisation by <a href="http://melaniehuang.com" target="_blank">Mel Huang</a></p>  
+            </div>
+        </div>
+    </div>
+
+    <div id="controls">    
+        <div id="button-options">
+            <button id="button-numbers" onclick="renderNumerals()">
+                <i id="n-button-on" class="zmdi zmdi-eye"></i>
+                <i id="n-button-off" class="zmdi zmdi-eye-off"></i>
+                Numbers
+            </button>
+            <button id="button-countries" onclick="renderCountryLabels()">
+                <i id="c-button-on" class="zmdi zmdi-eye"></i>
+                <i id="c-button-off" class="zmdi zmdi-eye-off"></i>
+                Countries
+            </button>
+        </div>
+        <div id="circles-slider"></div>
+    </div>
+   
+  </body>
+
+</html>
