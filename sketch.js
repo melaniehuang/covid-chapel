@@ -39,7 +39,7 @@ var monthNames = [
 
 function preload() {
   table = loadTable(
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQLtuhPGr7ExlZzoGLtbaxU_DcLqi8Gi_G40FFhUcVSR0WbBokoVz5w-qfokOHDsliecnvduCK5kXhG/pub?gid=7748059&single=true&output=csv",
+    "countries-long-lat.csv",
     'csv', 
     'header'
   );
